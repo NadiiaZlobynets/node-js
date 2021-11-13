@@ -1,4 +1,4 @@
-{"test-data": [
+{"test": [
   { "item": "orange", "type": "Clementine", "weight": 6, "pricePerKilo": "$7" },
   { "item": "apple", "type": "Fuji", "weight": 10, "pricePerKilo": "$3" },
   { "item": "watermelon", "type": "Nova", "quantity": 1, "pricePeritem": "$5" },
