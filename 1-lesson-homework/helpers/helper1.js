@@ -4,9 +4,7 @@ const jsonString = JSON.stringify(testData);
 
 const parsedData = JSON.parse(jsonString);
 
-
 let filtredArray = [];
-
 
 const filterKeyAndValue = (array, key, value ) => {
 
@@ -18,14 +16,11 @@ const filterKeyAndValue = (array, key, value ) => {
     } else if (object[key] === value) {
       filtredArray.push(object);
     }
-
-
   });
 
   return filtredArray;
 
 };
-
 
 console.log(filterKeyAndValue(parsedData, 'item', 'orange'));
 
