@@ -6,9 +6,7 @@ const parsedData = JSON.parse(jsonString);
 
 let calculatedPrice = [];
 
-let price = 0;
-
-const calculatePrice = (array, key, value ) => {
+const helper3 = (array, key, value ) => {
 
   calculatedPrice = [];
 
@@ -35,12 +33,12 @@ const calculatePrice = (array, key, value ) => {
   }
   });
 
-  console.log(calculatedPrice);
+  // console.log(calculatedPrice);
 
   return calculatedPrice;
 
 };
 
-calculatePrice(parsedData.test, 'item', 'orange');
+// helper3(parsedData.test, 'item', 'orange');
 
-module.exports = calculatePrice();
+module.exports = helper3();

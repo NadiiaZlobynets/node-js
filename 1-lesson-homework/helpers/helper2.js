@@ -4,12 +4,13 @@ const jsonString = JSON.stringify(testData);
 
 const parsedData = JSON.parse(jsonString);
 
-const findMostExpensive = (array) =>  {
+const helper2 = (array) =>  {
   let mostExpensive = [];
 
   mostExpensive = [];
 
   parsedData.test.forEach(object => {
+
 
     if(object.pricePerKilo !== undefined) {
       object.pricePerKilo =
@@ -46,12 +47,12 @@ const findMostExpensive = (array) =>  {
 
   mostExpensive.sort(compare);
 
-  console.log(mostExpensive[0]);
+  // console.log(mostExpensive[0]);
 
  return mostExpensive[0];
 
 };
 
-findMostExpensive(parsedData);
+// helper2(parsedData);
 
-module.exports = findMostExpensive();
+module.exports = helper2();

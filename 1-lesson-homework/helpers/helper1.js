@@ -6,7 +6,7 @@ const parsedData = JSON.parse(jsonString);
 
 let filtredArray = [];
 
-const filterKeyAndValue = (array, key, value ) => {
+const helper1 = (array, key, value ) => {
 
   filtredArray = [];
 
@@ -18,12 +18,14 @@ const filterKeyAndValue = (array, key, value ) => {
     }
   });
 
+  // console.log(filtredArray);
+
   return filtredArray;
 
 };
 
-console.log(filterKeyAndValue(parsedData, 'item', 'orange'));
+// console.log(helper1(parsedData, 'item', 'orange'));
 
-console.log(filterKeyAndValue(parsedData, 'weight', 4));
+// console.log(helper1(parsedData, 'weight', 4));
 
-module.exports = filterKeyAndValue();
+module.exports = helper1();
