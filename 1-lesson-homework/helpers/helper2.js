@@ -14,18 +14,23 @@ const findMostExpensive = (array) =>  {
     if(object.pricePerKilo !== undefined) {
       object.pricePerKilo =
       object.pricePerKilo.replace('$', '').split(',').join('.');
-      mostExpensive.push( parseFloat(object.pricePerKilo));
+
+      let calcPriceKilo = parseFloat(object.pricePerKilo);
+
+      calcPriceKilo *= object.weight;
+
+      mostExpensive.push( parseFloat(calcPriceKilo));
 
     } else if (object.pricePeritem !== undefined) {
 
       object.pricePeritem =
       object.pricePeritem.replace('$', '').split(',').join('.');
 
-      let calcPrice = parseFloat(object.pricePeritem);
+      let calcPriceItem = parseFloat(object.pricePeritem);
 
-      calcPrice *= object.quantity;
+      calcPriceItem *= object.quantity;
 
-      mostExpensive.push( calcPrice );
+      mostExpensive.push( calcPriceItem );
     }
   });
 
