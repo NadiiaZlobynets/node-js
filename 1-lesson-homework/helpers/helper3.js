@@ -33,7 +33,7 @@ const helper3 = (array, key, value ) => {
   }
   });
 
-  // console.log(calculatedPrice);
+  console.log(calculatedPrice);
 
   return calculatedPrice;
 
