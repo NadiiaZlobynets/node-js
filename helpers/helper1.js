@@ -24,13 +24,13 @@ const helper1 = (array, key, value ) => {
 
     });
 
-  console.log(filtredArray);
+  // console.log(filtredArray);
 
   return filtredArray;
 
 };
 
-helper1(testData, 'item', 'orange');
+// helper1(testData, 'item', 'orange');
 
 // console.log(helper1(testData, 'item', 'orange'));
 

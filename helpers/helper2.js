@@ -1,27 +1,26 @@
 const testData = require('../dataFromTestWork.json');
 
+let mostExpensive = [];
+
 const helper2 = (array) =>  {
-  let mostExpensive = [];
 
   mostExpensive = [];
 
   testData.test.forEach(object => {
 
+    if (object.pricePerKilo !== undefined) {
 
-    if(object.pricePerKilo !== undefined) {
-      object.pricePerKilo =
-      object.pricePerKilo.replace('$', '').split(',').join('.');
+      object.pricePerKilo = object.pricePerKilo.replace('$', '');
 
       let calcPriceKilo = parseFloat(object.pricePerKilo);
 
       calcPriceKilo *= object.weight;
 
-      mostExpensive.push( parseFloat(calcPriceKilo));
+      mostExpensive.push(parseFloat(calcPriceKilo));
 
     } else if (object.pricePeritem !== undefined) {
 
-      object.pricePeritem =
-      object.pricePeritem.replace('$', '').split(',').join('.');
+      object.pricePeritem = object.pricePeritem.replace('$', '');
 
       let calcPriceItem = parseFloat(object.pricePeritem);
 
@@ -43,12 +42,14 @@ const helper2 = (array) =>  {
 
   mostExpensive.sort(compare);
 
-  console.log(mostExpensive[0]);
+  // console.log(mostExpensive[0]);
 
  return mostExpensive[0];
 
 };
 
-// helper2(parsedData);
+helper2(testData);
+
+// console.log(helper2(testData));
 
 module.exports = helper2();
