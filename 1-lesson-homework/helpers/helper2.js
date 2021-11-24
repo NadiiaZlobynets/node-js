@@ -1,4 +1,4 @@
-const testData = require('../../data-from-test-work.json');
+const testData = require('../../dataFromTestWork.json');
 
 const jsonString = JSON.stringify(testData);
 
