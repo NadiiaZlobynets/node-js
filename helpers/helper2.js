@@ -48,7 +48,7 @@ const helper2 = (array) =>  {
 
 };
 
-helper2(testData);
+// helper2(testData);
 
 // console.log(helper2(testData));
 
