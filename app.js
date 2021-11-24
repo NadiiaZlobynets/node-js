@@ -1,12 +1,15 @@
-const testData = require('./dataFromTestWork');
+const testData = require('./dataFromTestWork.json');
 
 const helpers = require(
-  './1-lesson-homework/helpers/index'
+  './helpers'
   );
 
-  const { helper1: changedNameOfHelper1 } =
-  helpers; // change name "name" to other;
+  const {
+    helper1: filterItemsByKeyAndValue,
+    helper2: findTheMostExpensiveItem,
+    helper3: calculateThePriceOfItem
+    } = require('./helpers');
 
-console.log( helpers.helper1)
+console.log( helpers.helper1);
 
 // console.log(helpers.helper1(testData, 'item', 'orange'));
