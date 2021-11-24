@@ -1,16 +1,12 @@
 const testData = require('../dataFromTestWork.json');
 
-const jsonString = JSON.stringify(testData);
-
-const parsedData = JSON.parse(jsonString);
-
 let calculatedPrice = [];
 
 const helper3 = (array, key, value ) => {
 
   calculatedPrice = [];
 
-  parsedData.test.forEach(object => {
+  testData.test.forEach(object => {
 
     if(object.item === value || object.type === value) {
 
@@ -39,6 +35,6 @@ const helper3 = (array, key, value ) => {
 
 };
 
-helper3(parsedData.test, 'item', 'orange');
+helper3(testData.test, 'item', 'orange');
 
 module.exports = helper3();

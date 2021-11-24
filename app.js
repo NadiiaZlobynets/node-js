@@ -1,4 +1,4 @@
-const testData = require('./dataFromTestWork.json');
+const testData = require('./dataFromTestWork');
 
 const helpers = require(
   './helpers'

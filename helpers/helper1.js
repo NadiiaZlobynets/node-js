@@ -1,16 +1,12 @@
 const testData = require('../dataFromTestWork.json');
 
-const jsonString = JSON.stringify(testData);
-
-const parsedData = JSON.parse(jsonString);
-
 let filtredArray = [];
 
 const helper1 = (array, key, value ) => {
 
   filtredArray = [];
 
-  parsedData.test.forEach(object => {
+  testData.test.forEach(object => {
     if (object[key] === key) {
     filtredArray.push(object);
     } else if (object[key] === value) {

@@ -1,15 +1,11 @@
 const testData = require('../dataFromTestWork.json');
 
-const jsonString = JSON.stringify(testData);
-
-const parsedData = JSON.parse(jsonString);
-
 const helper2 = (array) =>  {
   let mostExpensive = [];
 
   mostExpensive = [];
 
-  parsedData.test.forEach(object => {
+  testData.test.forEach(object => {
 
 
     if(object.pricePerKilo !== undefined) {
