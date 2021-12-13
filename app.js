@@ -1,12 +1,43 @@
-const testData = require('./data-from-test-work.json');
+const testData = require('./dataFromTestWork.json');
 
-const helpers = require(
-  './1-lesson-homework/helpers/index'
-  );
+const {
+    helper1: filterItemsByKeyAndValue,
+    helper2: findTheMostExpensiveItem,
+    helper3: calculateThePriceOfItem
+    } = require('./helpers');
 
-  const { helper1: changedNameOfHelper1 } =
-  helpers; // change name "name" to other;
+const boot = (array) => {
 
-console.log( helpers.helper1)
+const task1 = calculateThePriceOfItem(array);
 
-// console.log(helpers.helper1(testData, 'item', 'orange'));
+console.log(task1);
+
+const itemOranges = filterItemsByKeyAndValue(array, 'item', 'orange');
+
+console.log(itemOranges);
+
+const itemWeight = filterItemsByKeyAndValue(array, 'weight', '4');
+
+console.log(itemWeight);
+
+const mostExpensiveOranges = findTheMostExpensiveItem(itemOranges);
+
+const mostExpensiveWeight = findTheMostExpensiveItem(itemWeight);
+
+const uniteResult = [];
+
+uniteResult.push(mostExpensiveOranges);
+
+uniteResult.push(mostExpensiveWeight);
+
+console.log(uniteResult);
+
+const task4 = calculateThePriceOfItem(uniteResult);
+
+console.log(task4);
+
+console.log(calculateThePriceOfItem());
+
+};
+
+boot(testData.test);
